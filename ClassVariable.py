@@ -7,7 +7,7 @@ class Employee:
         self.pay = pay
 
     @classmethod        #alternative for contructor  ...... this type is usuallly used in date and pre-built method
-    def from_string(cls,str):   # class methods usually pass class as first parameter
+    def from_string(cls,str):   # class methods usually pass class(cls = Employee) as first parameter
         first, last, pay = str.split(',')
         return cls(first,last,pay)
 
