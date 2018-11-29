@@ -1,5 +1,7 @@
+# anynomous function 
 ## lambda arguments: expression
 #it can have any number of arguments but single expression
+
 eg.
 # def cube(y): 
 #     return y*y*y; 
