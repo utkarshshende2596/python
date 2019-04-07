@@ -29,7 +29,8 @@ class Employee:
 emp_1 = Employee('Corey', 'Schafer', 50000)
 emp_2 = Employee('Test', 'Employee', 60000)
 
-# print(emp_1)      similar to overriding of tostring() to print the content of object
+
+#print(emp_1)     # similar to overriding of tostring() to print the content of object
 #
 # print(repr(emp_1))
 # print(str(emp_1))
