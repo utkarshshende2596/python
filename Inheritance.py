@@ -14,14 +14,14 @@ class Employee:
 class Devloper(Employee): #inheritance
     raise_amt = 1.10
     def __init__(self,first,last,pay,prog_lang):
-        super().__init__(first,last,pay)    # call to constructor of employee
+        super(object).__init__(first,last,pay)    # call to constructor of employee
         # Employee.__init__(first,last,pay)  is same as above but is usally used in multiple inheritance
         self.prog_lang=prog_lang
 
 
 class Manager(Employee):
     def __init__(self, first, last, pay, employee=None):
-        super().__init__(first, last, pay)
+        super(object).__init__(first, last, pay)
         if employee is None:
             self.employee=[]
         else:
@@ -59,3 +59,7 @@ man_1.print_employee()
 # print(emp_1.pay)
 #print(emp_1.first+" "+emp_1.last)
 # print(help(Manager))
+
+
+#Conventional method takes less time than getattr(), but when default values have to be used in case of missing attributes, getattr() is a good choice.
+#Applications : The are many applications of getattr(), few of them already mentioned in cases of absence of attributes of objects, in web developments where some of form attributes are optional. Also useful in cases of Machine Le

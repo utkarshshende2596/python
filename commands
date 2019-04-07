@@ -2,5 +2,5 @@ git checkout .
 git commit --amend -m "messge" //to change last commit messeqge
 git commit --amend // to add file to previous commit
 git log --stat //show files changes within commit
-git cherry-pick
+[git cherry-pick   git reset --soft "file name--git adds file again to staging area" git reset --hard "moves file to working dirextory"  ]
 
