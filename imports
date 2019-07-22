@@ -35,3 +35,6 @@ As initialized upon program startup, the first item of this list, path[0], is th
 >>> fib = fibo.fib
 >>> dir()
 ['__builtins__', '__name__', '__package__', 'a', 'fib', 'fibo', 'sys']
+
+~ import all packages
+https://realpython.com/python-modules-packages/#importing-from-a-package
