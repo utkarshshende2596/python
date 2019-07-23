@@ -1,4 +1,11 @@
 -Within a module, the module’s name (as a string) is available as the value of the global variable __name__
+-When a .py file is imported as a module, Python sets the special dunder variable __name__ to the name of the module. However, if a file is run as a standalone script, __name__ is (creatively) set to the string '__main__'. Using this fact, you can discern which is the case at run-time and alter behavior accordingly:
+    import pkg -> does nothing but adds only package name.
+-Package Initialization
+    If a file named __init__.py is present in a package directory, it is invoked when the package or a module in the package is imported. This can be used for execution of package initialization code, such as initialization of package-level data.
+    __init__.py ->  print(f'Invoking __init__.py for {__name__}')
+                    A = ['quux', 'corge', 'grault']
+
 -Note that in general the practice of importing * from a module or package is frowned upon, since it often causes poorly readable code.
 -Private methods can be called.(python scrambles name to avoid access)
 
@@ -9,6 +16,8 @@ When a module named spam is imported, the interpreter first searches for a built
 -the directory containing the input script (or the current directory).
 -PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).
 -the installation-dependent default.
+
+location - >__file__
 
 **A list of strings that specifies the search path for modules. Initialized from the environment variable PYTHONPATH, plus an installation-dependent default.
 
